@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #F8F7F8;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #F8F7F8;
+    --secondary-color: #302E2F;
+    --tertiary-color: #17C0B5;
+    --quaternary-color: #012A5A;
+}
