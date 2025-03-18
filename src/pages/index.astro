@@ -4,6 +4,8 @@ import Navigation from "../components/Navigation.astro";
 import SektionOverskrift from "../components/SektionOverskrift.astro";
 import BlivFrivillig from "../components/BlivFrivillig.astro";
 import Carousel from "../components/Carousel.astro";
+import TilmeldDig from "../components/TilmeldDig.astro";
+import Form from "../components/Form.astro";
 ---
 
 <!doctype html>
@@ -21,10 +23,13 @@ import Carousel from "../components/Carousel.astro";
   <body>
     <Navigation />
     <Carousel />
-<BlivFrivillig>
-    <SektionOverskrift overskrift="BLIV FRIVILLIG" billede="./imgs/girl-57.jpg" />
-  </BlivFrivillig>
+    <BlivFrivillig>
+      <SektionOverskrift overskrift="BLIV FRIVILLIG" billede="./imgs/girl-57.jpg" />
+    </BlivFrivillig>
     <SektionOverskrift overskrift="om os" billede="./imgs/girl-57.jpg" />
-    <SektionOverskrift overskrift="kontakt" billede="./imgs/girl-57.jpg" />
+    <SektionOverskrift overskrift="Tilmeld Dig" billede="./imgs/girl-57.jpg" />
+    <TilmeldDig>
+      <Form />
+    </TilmeldDig>
   </body>
 </html>
