@@ -1,11 +1,13 @@
 body {
-  font-family: sans-serif;
+
   margin: 0;
   background-color: #f8f7f8;
 }
 
 html {
   box-sizing: border-box;
+
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -24,4 +26,16 @@ img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+
+h3{
+    font-family: "Playfair Display";
+}
+h4{
+    font-family: "Pavanam";
+}
+p{
+    font-family: "Poppins";
+font-size: 16px;
 }

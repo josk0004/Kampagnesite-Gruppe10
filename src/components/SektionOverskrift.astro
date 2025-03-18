@@ -1,8 +1,8 @@
 ---
-const { overskrift, billede } = Astro.props;
+const { overskrift, billede, id } = Astro.props;
 ---
 
-<div>
+<div id=`${id}`>
   <h2>{overskrift}</h2>
   <img src={billede} alt="girl" />
 </div>
@@ -13,6 +13,8 @@ const { overskrift, billede } = Astro.props;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     align-items: center;
+    scroll-margin-top: 5vw;
+
   }
 
   img {
