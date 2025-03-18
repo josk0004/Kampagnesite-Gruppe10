@@ -1,0 +1,146 @@
+---
+
+---
+
+<h2>Ansøg om stilling som frivillig rådgiver</h2>
+<form>
+  <select id="application-type" name="application-type">
+    <option value="">Jeg søger til tilbuddet</option>
+    <option value="Samtaleforløb">Samtaleforløb</option>
+    <option value="Akutrådgivning">Akutrådgivning</option>
+    <option value="Gruppeforløb">Gruppeforløb</option>
+  </select>
+
+  <label for="full-name">Fulde Navn</label>
+  <input type="text" id="full-name" name="full-name" placeholder="John Doe" />
+
+  <label for="birthday">Fødselsdag</label>
+  <div class="form-row">
+    <div><input type="text" id="day" name="day" placeholder="Dag" /></div>
+    <div><input type="text" id="month" name="month" placeholder="Måned" /></div>
+    <div><input type="text" id="year" name="year" placeholder="År" /></div>
+  </div>
+
+  <label for="address">Addresse</label>
+  <input type="text" id="address" name="address" placeholder="Bagsværd Hovedgade 126" />
+
+  <label for="city">By</label>
+  <div class="form-row">
+    <div><input type="text" id="city" name="city" placeholder="Bynavn" /></div>
+    <div><input type="text" id="postal-code" name="postal-code" placeholder="Postnummer" /></div>
+  </div>
+
+  <label for="contact-info">Kontaktinformation</label>
+  <div class="form-row">
+    <div><input type="email" id="email" name="email" placeholder="E-mail" /></div>
+    <div><input type="tel" id="phone" name="phone" placeholder="Mobil" /></div>
+  </div>
+
+  <select id="current-employment" name="current-employment">
+    <option value="">Nuværende beskæftigelse</option>
+    <option value="Psykolog">Psykolog</option>
+    <option value="Læge">Læge</option>
+    <option value="Lærer">Lærer</option>
+    <option value="Sygeplejerske">Sygeplejerske</option>
+    <option value="Socialrådgiver">Socialrådgiver</option>
+    <option value="Præst">Præst</option>
+    <option value="Ledig">Ledig</option>
+    <option value="Pensionist/Efterlønner">Pensionist/Efterlønner</option>
+    <option value="Studerende">Studerende</option>
+    <option value="Andet">Andet</option>
+  </select>
+
+  <select id="education-background" name="education-background">
+    <option value="">Uddannelsesmæssig baggrund</option>
+    <option value="Psykolog">Psykolog</option>
+    <option value="Læge">Læge</option>
+    <option value="Sygeplejerske">Sygeplejerske</option>
+    <option value="Socialrådgiver">Socialrådgiver</option>
+    <option value="Præst">Præst</option>
+    <option value="Andet">Andet</option>
+  </select>
+
+  <select id="how-heard" name="how-heard">
+    <option value="">Hvorfra har du hørt om at blive frivillig på Misbrugsportalen?</option>
+    <option value="Kender">Kender nuværende eller tidligere frivillige på Misbrugsportalen</option>
+    <option value="Facebook/Instagram">Facebook/Instagram</option>
+    <option value="Linkedin">Linkedin</option>
+    <option value="Webinar">Webinar</option>
+    <option value="Oplæg">Oplæg på studie eller arbejde</option>
+    <option value="Annonve">Annonce/Opslag på studie eller arbejde</option>
+    <option value="Nyhedsmedier">Nyhedsmedier</option>
+    <option value="Influencer">Influencer</option>
+    <option value="Andet">Andet</option>
+  </select>
+
+  <label for="application-file">Upload ansøgning her (.pdf, .doc, .docx)</label>
+  <input type="file" id="application-file" name="application-file" />
+
+  <label for="cv-file">Upload CV her (.pdf, .doc, .docx)</label>
+  <input type="file" id="cv-file" name="cv-file" />
+
+  <button type="submit">Insend ansøgning &rarr;</button>
+</form>
+
+<style>
+  h2 {
+    font-family: "Playfair Display", sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: normal;
+    color: var(--secondary-color);
+  }
+
+  form {
+    max-width: 600px;
+    padding: 0 20px 20px 20px;
+    margin-inline: auto;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "pavanam", sans-serif;
+    font-size: 1.2rem;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+
+  .form-row > div {
+    flex: 1;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+  }
+
+  button:hover {
+    background-color: #002244;
+  }
+
+  #application-file,
+  #cv-file {
+    border: 2px solid var(--quaternary-color);
+  }
+</style>
