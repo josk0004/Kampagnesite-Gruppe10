@@ -1,0 +1,81 @@
+---
+
+---
+
+<div>
+  <div class="introGrid">
+    <img src="./svg/Vector.svg" alt="" class="Vector" />
+    <div>
+      <h3>Tilmed Dig</h3>
+      <span>​​Inden du udfylder nedestående ansøgningsskema, skal du have gennemført vores læring introduktionskursus som du finder på forsiden af <a href="www.rådgiverportalen.dk">www.rådgiverportalen.dk</a>. Herigennem får du et grundigt indblik i rådgiverrollen og kan orientere dig om de vigtigste faglige og praktiske informationer, som potentiel ny frivillig i rådgivningen.</span>
+    </div>
+  </div>
+  <div class="formGrid">
+    <slot />
+    <img src="./svg/VectorTowers.svg" class="VectorTowers" alt="" />
+  </div>
+</div>
+
+<style>
+  h3 {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .Vector {
+    width: 100%;
+  }
+
+  .introGrid {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    gap: 40px;
+    padding: 50px 50px 0 50px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  span {
+    font-family: "Poppins", sans-serif;
+    color: var(--secondary-color);
+  }
+
+  .formGrid {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    gap: 40px;
+    padding: 0 50px 20px 50px;
+    box-sizing: border-box;
+  }
+
+  .VectorTowers {
+    width: 100%;
+    grid-column: 3/4;
+    align-self: end;
+  }
+
+  @media screen and (max-width: 900px) {
+    .introGrid {
+      display: block;
+      max-width: 600px;
+      padding: 0 20px 20px 20px;
+      margin-inline: auto;
+      box-sizing: border-box;
+    }
+
+    .formGrid {
+      display: block;
+      padding: 0 20px 20px 20px;
+      gap: 0;
+      box-sizing: border-box;
+    }
+
+    .VectorTowers,
+    .Vector {
+      display: none;
+    }
+  }
+</style>
