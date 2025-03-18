@@ -1,7 +1,8 @@
 ---
+const { id } = Astro.props;
 ---
 
-<div class="introduktion_section">
+<div id=`${id}` class="introduktion_section">
 <div class="tekst_indhold">
     <div>
 <h3>Bliv frivillig i Pårørendes Netværk – støt dem, der står på sidelinjen</h3>
@@ -32,6 +33,9 @@
 
 
 <style>
+.introduktion_section{
+    scroll-margin-top: 10vw;
 
+}
 
 </style>

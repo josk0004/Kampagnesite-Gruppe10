@@ -7,6 +7,8 @@ import Carousel from "../components/Carousel.astro";
 import TilmeldDig from "../components/TilmeldDig.astro";
 import Form from "../components/Form.astro";
 import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Introduktion from "../components/Introduktion.astro";
 ---
 
 <!doctype html>
@@ -23,12 +25,14 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <Navigation />
+    <Hero />
+    <Introduktion id="introduktion"/>
     <Carousel />
     <BlivFrivillig>
       <SektionOverskrift overskrift="BLIV FRIVILLIG" billede="./imgs/girl-57.jpg" />
     </BlivFrivillig>
     <SektionOverskrift overskrift="om os" billede="./imgs/girl-57.jpg" />
-    <SektionOverskrift overskrift="Tilmeld Dig" billede="./imgs/girl-57.jpg" />
+    <SektionOverskrift id="tilmeld_dig" overskrift="Tilmeld Dig" billede="./imgs/girl-57.jpg" />
     <TilmeldDig>
       <Form />
     </TilmeldDig>
