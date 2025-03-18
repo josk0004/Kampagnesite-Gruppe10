@@ -2,47 +2,182 @@
 
 ---
 
-<nav>
-  <a href="#"><img src="./imgs/pmp_logo.webp" alt="PMP Logo" /></a>
-  <ul>
-    <li><a href="#">HOME</a></li>
-    <li><a href="#">BLIV FRIVILLIG</a></li>
-    <li><a href="#">OM OS</a></li>
-    <li><a href="#">TILMED DIG</a></li>
-    <li><a href="#">KONTAKT OS</a></li>
-  </ul>
-</nav>
+<div class="navigation">
+  <div class="logo">
+    <a href="#">
+      <img src="./imgs/pmp_logo.webp" alt="Logo" />
+    </a>
+  </div>
+  <nav>
+    <ul class="menu">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">BLIV FRIVILLIG</a></li>
+      <li><a href="#">OM OS</a></li>
+      <li><a href="#">TILMED DIG</a></li>
+      <li><a href="#">KONTAKT OS</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</div>
 
 <style>
-  nav {
+  .navigation {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    padding-inline: 2rem;
+    padding: 20px;
+    padding-inline: 50px;
     background-color: white;
-    position: sticky;
-    top: 0;
   }
 
-  nav img {
+  .logo img {
     width: 200px;
+    height: 100%;
+    z-index: 3;
+    position: relative;
   }
 
-  nav ul {
+  nav {
     display: flex;
-    gap: 3rem;
+    align-items: center;
   }
 
-  nav ul li {
+  .menu {
+    display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.5s ease-in-out;
   }
 
-  nav ul li a {
-    font-family: "Pavanam", sans-serif;
-    text-decoration: none;
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
     color: var(--secondary-color);
-    border-bottom: solid 3px var(--tertiary-color);
-    padding-bottom: 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-align: center;
+    font-family: "pavanam", sans-serif;
+    font-variation-settings: "wght" 400;
+    font-size: 1rem;
+    border-bottom: 3px solid var(--tertiary-color);
+  }
+
+  .menu a:hover {
+    color: var(--quaternary-color);
+  }
+
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+    z-index: 2;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--tertiary-color);
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  @media screen and (max-width: 900px) {
+    .navigation {
+      padding-inline: 20px;
+    }
+
+    .logo img {
+      width: 150px;
+    }
+    .menu {
+      display: block;
+      background-color: white;
+      position: absolute;
+      top: 94px;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      transform: translateY(-210%);
+    }
+
+    .burger {
+      display: block;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      transform: translateY(0%);
+    }
+
+    nav .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav .menu a {
+      font-size: 24px;
+    }
   }
 </style>
+
+<script>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+
+  if (burger) {
+    burger.addEventListener("click", burgerClick);
+  }
+  function burgerClick() {
+    if (burger) {
+      burger.classList.toggle("active");
+    }
+    if (nav) {
+      nav.classList.toggle("active");
+    }
+  }
+  if (menu) {
+    menu.addEventListener("click", menuClick);
+  }
+  function menuClick() {
+    if (burger) {
+      burger.classList.remove("active");
+    }
+    if (nav) {
+      nav.classList.remove("active");
+    }
+  }
+</script>
