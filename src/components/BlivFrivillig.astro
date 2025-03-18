@@ -1,0 +1,248 @@
+---
+
+---
+
+<div class="blivFrivillig">
+<slot />
+<div>
+    <div class="top">
+    <img class="zind imgsize" src="./svg/Vector.svg" alt="pattern">
+    <h2 class="header ">Hvad vil det sige at være frivillig?</h2>
+        <div class="text">
+            <p class="btmMargin">Som frivillig i Pårørendes Netværk er du med til at gøre en mærkbar forskel for mennesker, der ofte føler sig overset og alene. Vores pårørende står midt i en hverdag præget af misbrug tæt på livet – og de har brug for et trygt rum, hvor de kan blive hørt, mødt og forstået. Her spiller du som frivillig en vigtig rolle.
+            <p> Du bestemmer selv, hvor meget tid du vil lægge, og vi sørger for at klæde dig godt på, så du føler dig tryg i opgaven. Her er nogle af de måder, du kan bidrage på:</p>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="mid">
+<div class="textbox">
+    <h2 class="btmMargin centertext">Samtaler og støtte</h2>
+    <p>Som frivillig samtalepartner er du der for at lytte. Du behøver ikke at løse problemer eller være ekspert – det vigtigste er, at du kan skabe et nærværende rum, hvor pårørende trygt kan dele deres tanker og følelser. Vi tilbyder grundig introduktion og løbende sparring, så du føler dig godt rustet til opgaven.</p>
+</div>
+<div class="textbox">
+    <h2 class="btmMargin centertext">Samtaler og støtte</h2>
+    <p>Som frivillig samtalepartner er du der for at lytte. Du behøver ikke at løse problemer eller være ekspert – det vigtigste er, at du kan skabe et nærværende rum, hvor pårørende trygt kan dele deres tanker og følelser. Vi tilbyder grundig introduktion og løbende sparring, så du føler dig godt rustet til opgaven.</p>
+</div>
+</div>
+
+<div class="bottom overflow">
+<div class="relative">
+    <img class="absolute ellip21" src="./svg/Ellipse-21.svg" alt="pattern">
+
+    <div class="textbox left">
+        <h2 class="zind btmMarginL ">Som udgangspunkt <br/> forventer vi blot, at du:</h2>
+        <ul class="zind">
+            <li>Har tid og lyst til at engagere dig et par timer om måneden</li>
+            <li>Kan deltage i vores introduktion til arbejdet som frivillig</li>
+            <li>Er rummelig, lyttende og respektfuld i mødet med mennesker</li>
+        </ul> 
+    </div>
+</div>
+<div class="relative">
+    <img class="absolute ellip24" src="./svg/Ellipse-25.svg" alt="pattern">
+    <div class="textbox right">
+        <h2 class="zind btmMarginL righttext">Hvad kræver det?</h2>
+           <p class="zind">Det vigtigste for os er, at du har lyst til at gøre en forskel og møder mennesker med åbenhed og respekt. Du behøver ikke have faglig erfaring – vi giver dig den nødvendige oplæring og opbakning hele vejen.</p>
+    </div>
+</div>
+</div>
+
+</div>
+
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+    height: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blivFrivillig {
+    width: 100%;
+    height: 1620px;
+}
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.centertext {
+    text-align: center;
+}
+.righttext {
+    text-align: right;
+}
+.btmMargin{
+    margin-bottom: 2rem;
+}
+.btmMarginL{
+    margin-bottom: 3rem;
+}
+.left {
+    color: var(--primary-color);
+}
+.zind {
+    position: sticky;
+    z-index: -1;
+}
+
+    .textbox {
+        padding: 3rem 2rem;
+    }
+    .text {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }
+    .top {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        margin: 5rem auto;
+        width: 775px;
+        height: 250px;
+        gap: 20px;
+    }
+    .imgsize {
+        scale: 0.95;
+        grid-row: span 2;
+    }
+
+    .mid {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 1000px;
+        height: 475px;
+    }
+
+    .bottom {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: 405px;
+        gap: 30px;
+        justify-content: space-around;
+    }
+    .bottom p {
+        font-size: 115%;
+    }
+    .bottom h2 {
+        font-size: 155%;
+    }
+    .ellip21 {
+        top: -56%;
+        left: 0;
+        z-index: -2;
+        scale: 1.35;
+    }
+    .ellip24 {
+        top: -43%;
+        right: 0;
+        scale: 1;
+        z-index: -3;
+    }
+    .right {
+        width: 535px;
+        margin-left: auto;
+    }
+    .bottom li {
+        font-size: 115%;
+        margin-bottom: 1rem;
+    }
+    .bottom .textbox {
+      padding: 0 4rem;  
+    }
+
+    @media (max-width: 800px) {
+    .overflow {
+        width: 100%;
+        height: 900px;
+        overflow: hidden;
+    }
+    .blivFrivillig {
+    height: 2250px;
+    }
+        .textbox {
+        padding: 0 1rem;
+        margin-bottom: 4rem;
+    }
+        .top {
+        margin: 0 auto;
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        width: 95%;
+        height: 100%;
+        gap: 10px;
+    }
+    .imgsize {
+        scale: 1;
+        height: 90px;
+        grid-column: span 1;
+    }
+    .text {
+        grid-column: 1/3;
+        grid-row: 3/4;
+        padding: 1rem;
+    }
+    .mid {
+        margin: 0 auto;
+        display: block;
+        width: 95%;
+        height: 21%;
+        }
+
+    .bottom {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        height: 33%;
+        gap: 30px;
+        justify-content: space-around;
+    }
+    .left {
+        margin-top: 10rem;
+        margin-bottom: 9rem;
+    }
+    .ellip21 {
+        top: 53%;
+        left: 75%;
+        z-index: -4;
+        scale: 2.5;
+    }
+    .ellip24 {
+    top: -75%;
+    right: 0;
+    scale: 1;
+    z-index: -3;
+    }
+    .bottom .textbox {
+      padding: 0 2rem;  
+    }
+    .bottom p {
+        font-size: 100%;
+    }
+    .bottom h2 {
+        font-size: 145%;
+    }
+    .bottom li {
+        font-size: 100%;
+    }
+    .right {
+        width: 95%;
+    }
+    }
+
+</style>
