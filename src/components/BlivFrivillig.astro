@@ -2,7 +2,7 @@
 
 ---
 
-<div class="blivFrivillig">
+<div class="blivFrivillig overflowV2">
 <slot />
 <div>
     <div class="top">
@@ -57,13 +57,16 @@
 .header {
     height: 20px;
 }
-
-
-
+.overflowV2 {
+        width: 100%;
+        height: 2000px;
+        overflow: hidden;
+    }
 .blivFrivillig {
     width: 100%;
-    height: 1620px;
+    height: 1450px;
 }
+
 .absolute {
     position: absolute;
 }
@@ -134,13 +137,13 @@
         font-size: 155%;
     }
     .ellip21 {
-        top: -56%;
+        top: -45%;
         left: 0;
         z-index: -2;
         scale: 1.35;
     }
     .ellip24 {
-        top: -43%;
+        top: -33%;
         right: 0;
         scale: 1;
         z-index: -3;
@@ -164,7 +167,7 @@
         overflow: hidden;
     }
     .blivFrivillig {
-    height: 1775px;
+    height: 2100px;
     }
         .textbox {
         padding: 0 1rem;
@@ -192,14 +195,14 @@
         margin: 0 auto;
         display: block;
         width: 95%;
-        height: 25%;
+        height: 28%;
         }
 
     .bottom {
         margin: 0 auto;
         display: block;
         width: 100%;
-        height: 100%;
+        height: 41%;
         gap: 30px;
         justify-content: space-around;
     }
@@ -214,9 +217,9 @@
         scale: 2.5;
     }
     .ellip24 {
-    top: -75%;
+    top: -34%;
     right: 0;
-    scale: 1;
+    scale: 1.3;
     z-index: -3;
     }
     .bottom .textbox {
@@ -236,4 +239,13 @@
     }
     }
 
+    @media (min-width: 1300px) {
+    .blivFrivillig {
+    width: 100%;
+    height: 1600px;
+    }
+    .ellip24 {
+    top: -30%;
+    }
+}
 </style>
