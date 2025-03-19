@@ -35,7 +35,47 @@ const { id } = Astro.props;
 <style>
 .introduktion_section{
     scroll-margin-top: 10vw;
+}
 
+
+h3{
+    font-size: 32px;
+    margin-bottom: 10px;
+
+}
+h4{
+    font-size: 24px;
+    color: var(--quaternary-color);
+    margin-top:30px;
+    margin-bottom: 5px;
+}
+
+
+ul{
+    list-style-type: circle;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+li{
+    font-family: "Poppins";
+font-size: 16px;
+margin-top: 3px;
+margin-bottom: 3px;
+margin-left: 25px;
+}
+.introduktion_section{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.tekst_indhold{
+    display: grid;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 74px;
+
+  
 }
 
 </style>
