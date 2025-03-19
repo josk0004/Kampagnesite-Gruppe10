@@ -5,9 +5,9 @@
 <div>
   <div class="introGrid">
     <img src="./svg/Vector.svg" alt="" class="Vector" />
-    <div>
+    <div class="introText">
       <h3>Tilmed Dig</h3>
-      <span>​​Inden du udfylder nedestående ansøgningsskema, skal du have gennemført vores læring introduktionskursus som du finder på forsiden af <a href="www.rådgiverportalen.dk">www.rådgiverportalen.dk</a>. Herigennem får du et grundigt indblik i rådgiverrollen og kan orientere dig om de vigtigste faglige og praktiske informationer, som potentiel ny frivillig i rådgivningen.</span>
+      <span>Inden du udfylder nedestående ansøgningsskema, skal du have gennemført vores læring introduktionskursus som du finder på forsiden af <a href="www.rådgiverportalen.dk">www.rådgiverportalen.dk</a>. Herigennem får du et grundigt indblik i rådgiverrollen og kan orientere dig om de vigtigste faglige og praktiske informationer, som potentiel ny frivillig i rådgivningen.</span>
     </div>
   </div>
   <div class="formGrid">
@@ -31,11 +31,16 @@
 
   .introGrid {
     display: grid;
-    grid-template-columns: 1fr 600px 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     gap: 40px;
     padding: 50px 50px 0 50px;
     margin-bottom: 20px;
     box-sizing: border-box;
+  }
+
+  .introText {
+    max-width: 600px;
+    justify-self: center;
   }
 
   span {
@@ -45,7 +50,7 @@
 
   .formGrid {
     display: grid;
-    grid-template-columns: 1fr 600px 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
     gap: 40px;
     padding: 0 50px 20px 50px;
     box-sizing: border-box;
