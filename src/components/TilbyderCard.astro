@@ -3,20 +3,32 @@ const cards = [
   {
     title: "Fortrolige samtaler",
     description: "Individuelle samtaler, hvor pårørende kan dele deres oplevelser, få støtte og finde nye veje i en svær situation.",
-    icon: "./imgs/icon1.webp"
+    icon: "./svg/talkicon.svg",
   },
   {
     title: "Netværksgrupper",
     description: "Møder med andre pårørende i samme situation. Her kan man dele erfaringer, spejle sig i andres historier og finde styrke i fællesskabet.",
-    icon: "./imgs/icon2.webp"
+    icon: "./svg/groupicon.svg",
   },
   {
     title: "Arrangementer og oplæg",
     description: "Vi afholder løbende events, oplæg og temamøder med fokus på livet som pårørende. Her kan man få viden, inspiration og ikke mindst føle sig set og forstået.",
-    icon: "./imgs/icon3.webp"
-  }
+    icon: "./svg/handicon.svg",
+  },
 ];
 ---
+
+<section class="cards-container">
+  {
+    cards.map((card) => (
+      <div class="card">
+        <img src={card.icon} alt={card.title} />
+        <h3>{card.title}</h3>
+        <p>{card.description}</p>
+      </div>
+    ))
+  }
+</section>
 
 <style>
   .cards-container {
@@ -27,7 +39,6 @@ const cards = [
 
     margin: 0 auto;
     max-width: 1300px;
-   
   }
 
   .card {
@@ -35,25 +46,21 @@ const cards = [
     grid-template-rows: subgrid;
     grid-row: span 3;
     padding: 20px;
-
   }
-h3{
+  h3 {
     text-align: center;
-}
+  }
   .card img {
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
     margin: 0 auto;
   }
-</style>
 
-<section class="cards-container">
-    {cards.map((card) => (
-      <div class="card">
-        <img src={card.icon} alt={card.title} />
-        <h3>{card.title}</h3>
-        <p>{card.description}</p>
-      </div>
-    ))}
-  </section>
+  @media screen and (max-width: 900px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  }
+</style>
