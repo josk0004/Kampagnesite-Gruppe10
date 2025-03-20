@@ -1,30 +1,61 @@
-<section class="grid_tilbud"><div class="tilbud">
+---
+
+---
+
+<section class="grid_tilbud">
+  <div class="tilbud">
     <h2>Hvad tilbyder Pårørendes Netværk?</h2>
     <p>Hos Pårørendes Netværk er vi her for dem, der står midt i en svær hverdag som pårørende til én med et misbrug. Det kan være en partner, et barn, en forælder eller en ven – uanset relationen kan det være hårdt at stå på sidelinjen. Vi tilbyder et trygt fællesskab, hvor man ikke skal stå alene med sine tanker og bekymringer.</p>
     <p>Gennem vores frivillige og faglige kræfter tilbyder vi blandt andet:</p>
-</div>
-<div class="figur_tilbud">
-    <img src="/svg/figur_tilbud.svg" alt="figur"></div></section>
+  </div>
+  <div class="figur_tilbud">
+    <img src="/svg/figur_tilbud.svg" alt="figur" />
+  </div>
+</section>
+
 <style>
-    .tilbud{
-        margin: 0 auto;
-        max-width: 500px;
-        padding-top: 40px;
-      margin-right: 180px;
-      margin-top: 3rem;
-    
+  .tilbud {
+    margin: 0 auto;
+    max-width: 500px;
+    padding-top: 40px;
+    grid-column: 2/3;
+  }
+
+  .tilbud p:first-of-type {
+    margin-bottom: 1rem;
+  }
+  .grid_tilbud {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    margin-inline: 40px;
+    gap: 40px;
+    margin-top: 2rem;
+  }
+  .figur_tilbud img {
+    width: 40%;
+    padding-top: 30px;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    /* text-align: center; */
+    font-family: "Playfair Display", serif;
+  }
+
+  @media screen and (max-width: 900px) {
+    .grid_tilbud {
+      grid-template-columns: 5fr 1fr;
+      max-width: 600px;
+      padding: 0 20px 20px 20px;
+      margin-inline: auto;
+      box-sizing: border-box;
     }
-    .grid_tilbud{
-        display: grid;
-        grid-template-columns: 3fr 1fr; 
+    .figur_tilbud img {
+      width: 70%;
+      padding-top: 45px;
     }
-    .figur_tilbud img{
-        width: 15%;
-        padding-top: 90px;
+
+    .tilbud {
+      grid-column: 1/2;
     }
-    h2{
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-  
+  }
 </style>
