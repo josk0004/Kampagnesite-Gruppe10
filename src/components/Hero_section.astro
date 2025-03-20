@@ -9,11 +9,18 @@
   </picture>
 
   <h1 class="slogan">BLIV FRIVILLIG <br /><span> GØR EN FORSKEL</span></h1>
-  <div class="knap"><a href="#tilmeld_dig">Tilmeld dig</a></div>
+  <div class="knap desk"><a href="#tilmeld_dig">Tilmeld dig</a></div>
+  <div class="knapv2 mobil"><a href="#tilmeld_dig">Tilmeld dig</a></div>
   <div class="pil"><a href="#introduktion"><img class="hero" src="./svg/pil.svg" alt="hero" /></a></div>
 </section>
 
 <style>
+.desk {
+    display: block;
+}
+.mobil {
+    display: none;
+}
   .herosection {
     position: relative;
     width: 100%;
@@ -62,25 +69,36 @@
     transform: translate(-50%, -50%);
   }
 
-  @media screen and (max-width: 900px){
+  @media screen and (max-width: 800px){
+  .desk {
+    display: none;
+  }
+  .mobil {
+    display: grid;
+    width: 200px;
+    margin: 0 auto;
+  }
   .slogan {
-    top: 72%;
+    top: 63%;
     left: 50%;
     font-size: 42px;
     text-align: center;
   }
-  .knap a {
-   
-    font-size: 16px;
-    top: 82%;
-    left: 38%;
+  .knapv2 a {
+    z-index: 10;
+    color: var(--primary-color);
+    pointer-events: auto;
+    font-family: "Poppins";
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 200px;
     text-align: center;
-    padding: 10px 32px;
+    padding: 12px 34px;
     background-color: var(--quaternary-color);
   }
   .pil{
-    top: 95%;
-    left: 50%;
+    top: 88%;
     width: 10%;
   }
 span{
