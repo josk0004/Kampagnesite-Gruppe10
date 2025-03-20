@@ -6,7 +6,7 @@ const { id } = Astro.props;
 <div class="tekst_indhold">
     <div>
 <h3>Bliv frivillig i Pårørendes Netværk – støt dem, der står på sidelinjen</h3>
-<p class="desktop">Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro. Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro.</p>
+<p class="mobile">Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro. Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro.</p>
 </div>
 
 <div>
@@ -78,4 +78,56 @@ margin-left: 25px;
   
 }
 
+ @media (max-width: 800px) {
+.introduktion_section{
+    scroll-margin-top: 10vw;
+}
+
+
+h3{
+    font-size: 22px;
+    margin-bottom: 10px;
+
+}
+h4{
+    font-size: 20px;
+    color: var(--quaternary-color);
+    margin-top:30px;
+    margin-bottom: 5px;
+}
+p{
+    font-size: 14px;
+}
+
+ul{
+    list-style-type: circle;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+li{
+    font-family: "Poppins";
+font-size: 14px;
+margin-top: 3px;
+margin-bottom: 3px;
+margin-left: 25px;
+}
+.introduktion_section{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
+.tekst_indhold{
+    display: grid;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 74px;
+  
+}
+.mobile{
+    margin-left: 100px;
+}
+
+
+ }
 </style>
