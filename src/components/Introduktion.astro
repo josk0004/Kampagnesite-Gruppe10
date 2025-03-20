@@ -6,7 +6,11 @@ const { id } = Astro.props;
 <div class="tekst_indhold">
     <div>
 <h3>Bliv frivillig i Pårørendes Netværk – støt dem, der står på sidelinjen</h3>
-<p class="mobile">Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro. Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro.</p>
+<p class="desk">Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro. Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro.</p>
+<div class="mobil">
+    <img class="towerMobil" src="./svg/VectorTowers.svg" alt="pattern">
+    <p>Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro. Når én har et misbrug, rammer det hele familien. Hos Pårørendes Netværk hjælper vi dem, der står tæt på – med rådgivning, samtaler og fællesskaber, hvor pårørende kan få støtte og finde ro.</p>
+</div>
 </div>
 
 <div>
@@ -29,18 +33,33 @@ const { id } = Astro.props;
 
 <img class="desktop" src="" alt="">
 </div>
+<img class="tower desk" src="./svg/VectorTowers.svg" alt="pattern">
 </div>
 
 
 <style>
+.desk {
+    display: block;
+}
+.mobil {
+    display: none;
+}
+.tower {
+position: absolute;
+top: 20px;
+left: 75px;
+width: 100px;
+transform: rotate(180deg);
+}
 .introduktion_section{
     scroll-margin-top: 10vw;
+    position: relative;
 }
 
 
 h3{
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 
 }
 h4{
@@ -64,21 +83,25 @@ margin-bottom: 3px;
 margin-left: 25px;
 }
 .introduktion_section{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+
 }
 
 .tekst_indhold{
-    display: grid;
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 74px;
-
-  
+display: flex;
+flex-direction: column;
+width: 610px;
+  margin: 5rem auto;
 }
 
  @media (max-width: 800px) {
+.desk {
+    display: none;
+}
+.mobil {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 20px;
+}
 .introduktion_section{
     scroll-margin-top: 10vw;
 }
@@ -86,7 +109,7 @@ margin-left: 25px;
 
 h3{
     font-size: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 
 }
 h4{
@@ -111,23 +134,11 @@ margin-top: 3px;
 margin-bottom: 3px;
 margin-left: 25px;
 }
-.introduktion_section{
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-}
 
 .tekst_indhold{
-    display: grid;
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 74px;
+    width: 95%;
   
 }
-.mobile{
-    margin-left: 100px;
-}
-
 
  }
 </style>

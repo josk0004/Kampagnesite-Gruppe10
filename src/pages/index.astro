@@ -27,15 +27,16 @@ import InfoBox from "../components/InfoBox.astro";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Pavanam&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
   </head>
-  <body>
+  <body>    
+    <div id="home"></div>
     <Navigation />
     <Hero />
     <Introduktion id="introduktion" />
     <Carousel />
     <BlivFrivillig>
-      <SektionOverskrift overskrift="BLIV FRIVILLIG" billede="./imgs/girl.webp" />
+      <SektionOverskrift id="bliv_frivillige" overskrift="BLIV FRIVILLIG" billede="./imgs/girl.webp" />
     </BlivFrivillig>
-    <SektionOverskrift overskrift="om os" billede="./imgs/people.webp" />
+    <SektionOverskrift id="om_os" overskrift="om os" billede="./imgs/people.webp" />
     <Tilbyder />
     <TilbyderCard/>
     <Intro/>
@@ -44,6 +45,7 @@ import InfoBox from "../components/InfoBox.astro";
     <TilmeldDig>
       <Form />
     </TilmeldDig>
+    <div id="kontakt_os"></div>
     <Footer />
   </body>
 </html>

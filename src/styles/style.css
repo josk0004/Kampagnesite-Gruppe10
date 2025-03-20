@@ -1,5 +1,4 @@
 body {
-
   margin: 0;
   background-color: #f8f7f8;
 }
@@ -28,14 +27,13 @@ img {
   display: block;
 }
 
-
-h3{
-    font-family: "Playfair Display";
+h3 {
+  font-family: "Playfair Display";
 }
-h4{
-    font-family: "Pavanam";
+h4 {
+  font-family: "Pavanam";
 }
-p{
-    font-family: "Poppins";
-font-size: 16px;
+p {
+  font-family: "Poppins";
+  font-size: 16px;
 }
