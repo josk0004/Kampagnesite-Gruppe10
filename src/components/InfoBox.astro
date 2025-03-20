@@ -1,0 +1,77 @@
+---
+
+---
+
+<div class="infobox">
+    <div class="info">
+        <div class="infotext">
+            <p class="XLtext">+ 10</p>
+            <p>ÅRS ERFARING</p>
+        </div>
+        <div class="infotext">
+            <p class="XLtext">9,2</p>
+            <p>I SCORE</p>
+        </div>
+        <div class="infotext">
+            <p class="XLtext">100%</p>
+            <p>FORTROLIG</p>
+        </div>
+    </div>
+    <img class="bgimg" src="./svg/Frame-2.svg" alt="quote">
+</div>
+
+
+<style>
+    .infobox {
+        background-color: var(--quaternary-color);
+        height: 250px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: grid;
+    }
+    .info {
+        width: 1000px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-self: center;
+        z-index: 1;
+        margin: 0 auto;
+    }
+    .infotext {
+        display: flex;
+        flex-direction: column;
+        color: var(--primary-color);
+    }
+    .XLtext {
+        font-size: 200%;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-family: "Poppins";
+        font-size: 16px;
+        text-align: center;
+    }
+    .bgimg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        scale: 1.4;
+        z-index: 1;
+    }
+    @media (max-width: 800px) {
+        .infobox {
+            height: 190px;
+        }
+        .info {
+            width: 100%;
+        }
+        .XLtext {
+        font-size: 150%;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: 13px;
+    }
+    }
+</style>
