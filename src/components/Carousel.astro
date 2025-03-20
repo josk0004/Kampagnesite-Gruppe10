@@ -29,109 +29,149 @@
       </div>
     </div>
     <button class="btn next">&#10095;</button>
-  </div>
+</div>
+<img class="bgimg" src="./svg/Frame-2.svg" alt="quote">
 </div>
 
 <style>
-  .container {
-    height: 375px;
-    width: 100%;
-    background-color: var(--tertiary-color);
-    display: grid;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    align-self: center;
-  }
-  .carousel-container h2 {
-    align-self: center;
-    font-size: 130%;
-    line-height: 150%;
-  }
-  .citat1 {
-    position: absolute;
-    left: 9%;
-    top: 6%;
-    width: 35px;
-    height: 35px;
-  }
-  .citat2 {
-    position: absolute;
-    right: 9%;
-    bottom: 6%;
-    width: 30px;
-    height: 30px;
-    transform: rotate(180deg);
-  }
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-    gap: 3rem;
-    height: 335px;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-  }
-  .carousel-item {
-    min-width: 25%; /* Show 4 items at a time */
-    padding: 20px;
-    text-align: center;
-    background: var(--primary-color);
-    display: grid;
-    position: relative;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.44);
-  }
-  .btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  .prev {
-    left: 10px;
-  }
-  .next {
-    right: 10px;
-  }
+    .bgimg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        scale: 1.4;
+        z-index: 1;
+    }
+    .container {
+        height: 375px;
+        width: 100%;
+        background-color: var(--tertiary-color);
+        display: grid;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+    .carousel-container { 
+        width: 100%; 
+        overflow: hidden; 
+        position: relative; 
+        display: flex; 
+        align-items: center; 
+        align-self: center;
+        z-index: 2;
+    }
+    .carousel-container h2 { 
+        align-self: center;
+        font-size: 130%;
+        line-height: 150%;
+    }
+    .citat1 {
+        position: absolute;
+        left: 9%;
+        top: 6%;
+        width: 35px;
+        height: 35px;
+    }
+    .citat2 {
+        position: absolute;
+        right: 9%;
+        bottom: 6%;
+        width: 30px;
+        height: 30px;
+        transform: rotate(180deg);
+    }
+    .carousel { 
+        display: flex; 
+        transition: transform 0.5s ease-in-out; 
+        width: 100%;
+        gap: 3rem;
+        height: 335px;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+    .carousel-item { 
+        min-width: 25%; /* Show 4 items at a time */
+        padding: 20px; 
+        text-align: center; 
+        background: var(--primary-color);
+        display: grid;
+        position: relative;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.44);
+    }
+    .btn { 
+        position: absolute; 
+        top: 50%; 
+        transform: translateY(-50%); 
+        background: rgba(0, 0, 0, 0.5); 
+        color: white; 
+        border: none; 
+        padding: 10px; 
+        cursor: pointer; 
+        z-index: 10; 
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+    @media (max-width: 800px) {
+        .bgimg {
+            scale: 5;
+        }
+        .carousel-item { 
+            min-width: 100%; 
+        }
+        .prev { 
+        left: 83px;
+        top: 284px;
+        }
+        .next { 
+        right: 83px;
+        top: 284px; 
+        }
+    }
 </style>
 
 <script>
-  let index = 0;
-  const carousel = document.getElementById("carousel");
-  const items = document.querySelectorAll(".carousel-item");
-  const next = document.querySelector(".next");
-  const prev = document.querySelector(".prev");
-  const totalItems = items.length;
+let index = 0;
+const carousel = document.getElementById("carousel");
+const items = document.querySelectorAll(".carousel-item");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+const totalItems = items.length;
 
-  function updateCarousel() {
-    let offset = -index * (100 / 4.8); // Adjust for 4 items at a time
-    if (carousel) {
-      carousel.style.transform = `translateX(${offset}%)`;
+function updateCarousel() {
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        let offset = -index * 113;
+        carousel.style.transform = `translateX(${offset}%)`;
+    } else {
+        let offset = -index * (100 / 4.8); // Adjust for 4 items at a time
+        carousel.style.transform = `translateX(${offset}%)`;
     }
-  }
+}
 
-  if (next) {
-    next.addEventListener("mousedown", () => moveSlide(1));
-  }
-  if (prev) {
-    prev.addEventListener("mousedown", () => moveSlide(-1));
-  }
+next.addEventListener("mousedown", () => moveSlide(1));
+prev.addEventListener("mousedown", () => moveSlide(-1));
 
-  function moveSlide(direction: number) {
+// Auto-move function (every 5 seconds)
+function startAutoSlide() {
+    return setInterval(() => moveSlide(1), 5000);
+}
+
+let autoSlide = startAutoSlide(); // Start auto-slide
+
+function moveSlide(direction) {
     index += direction;
-    if (index < 0) index = totalItems - 3; // Adjust to prevent empty spaces
-    if (index > totalItems - 3) index = 0; // Wrap around
+    
+    if (window.matchMedia("(max-width: 800px)").matches) {
+        if (index < 0) index = totalItems - 1; // Prevent empty spaces
+        if (index > totalItems - 1) index = 0; // Wrap around
+    } else {
+        if (index < 0) index = totalItems - 3; // Prevent empty spaces
+        if (index > totalItems - 3) index = 0; // Wrap around
+    }
+
     updateCarousel();
-  }
+    
+    // Reset auto-slide timer after manual interaction
+    clearInterval(autoSlide);
+    autoSlide = startAutoSlide();
+}
 </script>
